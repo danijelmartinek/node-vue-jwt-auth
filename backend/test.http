@@ -1,0 +1,34 @@
+
+POST http://localhost:3000/register HTTP/1.1
+content-type: application/json
+
+{
+    "email":"example@gmail.com",
+    "firstName": "John",
+    "lastName": "Doe",
+    "password":"banana"
+}
+
+###
+
+POST http://localhost:3000/login HTTP/1.1
+content-type: application/json
+
+{
+    "email":"example@gmail.com",
+    "password": "banana"
+}
+
+###
+
+GET http://localhost:3000/auth
+Cookie: access_token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI1YzVlYzRmNDA2MzhhZjNiNGNkYzFhMDIiLCJlbWFpbCI6ImV4YW1wbGVAZ21haWwuY29tIiwiZmlyc3ROYW1lIjoiSm9obiIsImxhc3ROYW1lIjoiRG9lIiwicm9sZSI6MSwiaWF0IjoxNTQ5NzE0Njc2fQ.0W9yMOS7yque9bmFf4kpzK3OXjFkd2jj6ZosAwC4Sow; Max-Age=3600; Path=/; Expires=Sat, 09 Feb 2019 13:17:56 GMT; HttpOnly
+
+###
+
+GET http://localhost:3000/logout
+Cookie: access_token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI1YzVlYzRmNDA2MzhhZjNiNGNkYzFhMDIiLCJlbWFpbCI6ImV4YW1wbGVAZ21haWwuY29tIiwiZmlyc3ROYW1lIjoiSm9obiIsImxhc3ROYW1lIjoiRG9lIiwicm9sZSI6MSwiaWF0IjoxNTQ5NzE0Njc2fQ.0W9yMOS7yque9bmFf4kpzK3OXjFkd2jj6ZosAwC4Sow; Max-Age=3600; Path=/; Expires=Sat, 09 Feb 2019 13:17:56 GMT; HttpOnly
+
+###
+
+GET http://localhost:3000/emails
